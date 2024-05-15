@@ -1,4 +1,6 @@
 ---- Actividad 15 mayo
+-- David Ariza 20221020029
+-- Oscar Contreras 20221020052
 import Text.Regex (matchRegex, mkRegex)
 
 -- Base de datos para los prestamos de la Biblioteca
