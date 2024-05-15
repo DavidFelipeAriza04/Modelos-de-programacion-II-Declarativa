@@ -27,6 +27,7 @@ usuarios ((u, l') : prestamos) l =
     else
       usuarios prestamos l
 
+-- Imprimir los prestamos
 printPrestamos :: Prestamos -> IO ()
 printPrestamos [] = return ()
 printPrestamos ((u, l') : prestamos) = do
@@ -60,7 +61,3 @@ devolver ((u', l') : prestamos) u l =
       prestamos
     else
       (u', l') : (devolver prestamos u l)
-
---Diccionario Nuevo llamado libro: (id, nombrelibro)
--- A la funcion de usuarios se le pasa el id del nombre en vez del nombre del libro
---Si la cantidad de libros prestados a un usuario es mayor a x, no le preste mas
