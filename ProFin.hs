@@ -41,6 +41,6 @@ main = do
   d <- query_ conn "SELECT department_id, department_name, location_id from departments" :: IO [DeptRow]
   let departments = createDepartmentList d
   mapM_ print departments
-  I.writeFile "ProyectoFinal/Data.json" (encodeToLazyText persons)
+  I.writeFile "ProyectoFinal/Persons.json" (encodeToLazyText persons)
   I.writeFile "ProyectoFinal/Departments.json" (encodeToLazyText departments)
   close conn

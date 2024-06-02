@@ -23,9 +23,7 @@ librosEmail =
 
 -- Funcion que buscar personas que poseen un determinado libro solo con ingresar parte del nombre del libro.
 buscarLibro :: LibrosEmail -> Libro -> [Usuario]
-
-buscarLib o [] _ = []
-
+buscarLibro [] _ = []
 buscarLibro ((usuario, email, libro, id) : prestamos) libroBuscado =
   if matchRegex (mkRegex (".*" ++ libroBuscado ++ ".*")) libro /= Nothing
     then usuario : buscarLibro prestamos libroBuscado
